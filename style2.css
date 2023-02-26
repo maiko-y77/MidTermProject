@@ -1,0 +1,303 @@
+html {
+    font-size: 100%;
+    /*ユーザー設定の文字サイズを正しく反映*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+* {
+    box-sizing: border-box;
+    /*余白や線を幅や高さに含める*/
+}
+
+img {
+    max-width: 100%;
+    /*画像が親要素からはみ出すのを防ぐ*/
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*垂直中央に整列*/
+}
+
+header h1 {
+    text-shadow: 0 0 0.2em rgba(100, 100, 100, 1);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header li {
+    margin-left: 40px;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+}
+
+header li a:hover {
+    opacity: 0.5;
+}
+
+div {
+    position: relative;
+}
+
+img {
+    width: 100%;
+    /* divの幅に対する割合 */
+}
+
+div h2 {
+    color: #ffffff;
+    /* 文字色 */
+    font-size: 24px;
+    /* 文字の大きさ */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    /* 垂直中心 */
+    justify-content: center;
+    /* 水平中心 */
+}
+
+.product::before,
+.product::after {
+    border-top: 1px solid;
+    content: "";
+    width: 3em;
+}
+
+.product::before {
+    margin-right: 1em;
+}
+
+.product::after {
+    margin-left: 1em;
+}
+
+.items {
+    display: flex;
+    align-items: flex-start;
+}
+
+.sportsgoods {
+    width: calc(33.3% - 10px);
+    margin: 5px;
+}
+
+.sportsgoods img {
+    height: auto;
+    background-color: #fff;
+}
+
+.sportsgoods img:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    -ms-filter: "alpha(opacity=70)";
+}
+
+.sportsgoods img a {
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.news_container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.news_title {
+    display: flex;
+    align-items: center;
+    /* 垂直中心 */
+    justify-content: center;
+    /* 水平中心 */
+}
+
+.news_title::before,
+.news_title::after {
+    border-top: 1px solid;
+    content: "";
+    width: 3em;
+}
+
+.news_title::before {
+    margin-right: 1em;
+}
+
+.news_title::after {
+    margin-left: 1em;
+}
+
+.news_list {
+    margin: 20px 0;
+}
+
+.news_list li {
+    padding: 15px 5px;
+    border-bottom: 1px dashed rgba(84, 84, 84, 0.2);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.date {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.category {
+    display: inline-block;
+    /*これで横並びでブロック*/
+    color: #fff;
+    width: 120px;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 10px;
+    padding: 2px 10px;
+    background-color: rgba(84, 84, 84, 0.5);
+}
+
+.news_text a {
+    color: #333;
+}
+
+.news_text a:hover {
+    opacity: 0.5;
+}
+
+.news_btn {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.news_btn a {
+    color: #333;
+}
+
+.news_btn a:hover {
+    opacity: 0.5;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: #999;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #000;
+}
+
+.footer {
+    padding: 2rem;
+    font-size: 15px;
+    color: #999;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+}
+
+@media screen and (max-width:767px) {
+    header {
+        flex-direction: column;
+        padding: 4% 2%;
+    }
+
+    header nav,
+    ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    header li {
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(84, 84, 84, 0.2);
+    }
+
+    header ul li:last-child {
+        margin: 0;
+        text-align: center;
+        border-bottom: none;
+    }
+
+    header a {
+        display: block;
+        padding: 8px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .product,
+    .news_title {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 10px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .md-flex {
+        display: flex;
+    }
+
+    .md-flex li+li {
+        margin-left: 16px;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .news_container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .news_text a {
+        display: block;
+        margin-top: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
